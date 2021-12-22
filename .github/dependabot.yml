@@ -1,0 +1,24 @@
+
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+    reviewers:
+      - catchen
+    assignees:
+      - catchen
+    labels:
+      - accept2ship
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: daily
+    reviewers:
+      - catchen
+    assignees:
+      - catchen
+    labels:
+      - accept2ship
