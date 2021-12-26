@@ -15,4 +15,25 @@ If you are using Windows, follow [Microsoft's step-by-step guide](https://docs.m
 Start with cloning this repository. Then get into the directory, set Node to the correct version and use Yarn to install dependencies. Set environment variable `NODE_ENV` to `development`. Start a local server with Yarn. Now you can modify the code and see your change locally.
 
 ```
-git clone git@github.com:avocadotoastlive/avocadotoast.live
+git clone git@github.com:avocadotoastlive/avocadotoast.live.git
+cd avocadotoast.live
+nvm install
+yarn install
+echo 'NODE_ENV=development' > .env
+yarn start
+```
+
+### NVM has error on Windows.
+
+[NVM for Windows](https://github.com/coreybutler/nvm-windows#installation--upgrades) doesn't support Node version being defined in the [`.nvmrc`](https://github.com/avocadotoastlive/avocadotoast.live/blob/master/.nvmrc) file. `nvm install` without a version number will trigger an error. Use the following lines to replace the `nvm install` from above. (If [`.nvmrc`](https://github.com/avocadotoastlive/avocadotoast.live/blob/master/.nvmrc) is no longer pointing to lts/erbium, use the version defined in there instead.)
+
+```
+nvm install lts/gallium
+nvm use lts/gallium
+```
+
+## How does it work?
+
+This project uses a static site generator called [Eleventy](https://www.11ty.dev/). It fetches data from the podcast's feed and then generate a page for each episode. And then it adds a homepage. That's everything it does.
+
+The homepage's source code is in [index.liquid](https://github.com/avocadotoastlive/avocadotoast.live/blob/master/_includes/index.liquid). [episodes.liquid](https://github.com/avocadotoastlive/avocadotoast.live/blob/master/_includes/episode.liquid
