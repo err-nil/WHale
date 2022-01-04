@@ -15,4 +15,33 @@
                           srcset="{% for size in type.sizes %}{{ size.image }} {{ size.size }}w{% if forloop.last != true %}, {% endif %}{% endfor %}"
                           sizes="(min-width: 1200px) 150px, (min-width: 992px) 120px, (min-width: 768px) 80px, 0"
                         />
-     
+                      {% endfor %}
+                      <img
+                        class="img-fluid square-image-item"
+                        src="{{ item.itunes.images.map['image/jpeg'][160] }}"
+                        loading="lazy"
+                        alt="cover art"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-10">
+                <div class="card-body">
+                  <h2 class="card-title text-truncate">
+                    {{ item.title }}
+                  </h2>
+                  <div class="card-text text-truncate text-truncate-multiline">
+                    {{ item.contentSnippet }}
+                  </div>
+                  <div class="card-text mt-2">
+                    <small{% if episode != item.itunes.episode %} class="text-muted"{% endif %}>
+                      <span data-date="{{ item.pubDate }}">{{ item.pubDate | date: '%Y 年 %m 月 %d 日' }}</span>发布
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      {% endfo
