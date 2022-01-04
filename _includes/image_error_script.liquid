@@ -1,0 +1,12 @@
+<script>
+window.addEventListener('error', function(event) {
+  if (event.target && event.target.tagName === 'IMG') {
+    event.target.style.display = 'none';
+    window.gtag('event', 'error', {
+      non_interaction: true,
+      event_category: 'image',
+      event_label: event.target.currentSrc || event.target.src
+    });
+  }
+}, true);
+</script>
