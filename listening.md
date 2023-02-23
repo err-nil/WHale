@@ -21,3 +21,11 @@ title: 收听指南
 - [RSS](https://avocadotoast.typlog.io/episodes/feed.xml)
 
 ## 半泛用播客平台：
+
+- [小宇宙](https://www.xiaoyuzhoufm.com/podcast/5e7c8b2b418a84a046e3ecbc)
+
+## 其他播客平台：
+
+- [Spotify](https://open.spotify.com/show/3royq81yR8oRcdC0KxXBhY)
+- [喜马拉雅](https://www.ximalaya.com/keji/29161862/)
+- [QQ 音乐](https://y.qq.com/n/yqq/singer/001G2mFW47nPJr.html)
